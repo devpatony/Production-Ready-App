@@ -15,7 +15,7 @@ const View = async ({ id }: { id: string }) => {
     .commit();
 
   return (
-    <div className="view-container">
+    <div className="view-container" style={{ marginBottom: "58px" }}>
       <div className="absolute -top-2 -right-2">
         <Ping />
       </div>
