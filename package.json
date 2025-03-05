@@ -29,7 +29,7 @@
     "@uiw/react-md-editor": "^4.0.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react":  "^0.452.0",
+    "lucide-react":  "^0.450.0",
     "markdown-it": "^14.1.0",
     "next": "^15.2.0-canary.64",
     "next-auth": "^5.0.0-beta.25",
@@ -54,7 +54,7 @@
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "esbuild-register": "^3.0.0"
+    "typescript": "^5"
+   
   }
 }
