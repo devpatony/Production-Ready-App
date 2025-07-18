@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Production-Ready Startup Platform
 
-## Getting Started
+A modern, full-stack startup platform built with Next.js 15, Sanity CMS, and TypeScript. This platform allows entrepreneurs to showcase their startups, browse other projects, and engage with the startup community.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Startup Showcase**: Create and display startup profiles with detailed information
+- **User Authentication**: Secure authentication using NextAuth.js with GitHub integration
+- **Content Management**: Headless CMS powered by Sanity for easy content management
+- **Real-time Views**: Track and display view counts for startup profiles
+- **Search Functionality**: Search for startups by name, category, or description
+- **Responsive Design**: Mobile-first responsive design with Tailwind CSS
+- **Editor's Picks**: Curated startup recommendations
+- **User Profiles**: Personal profiles showcasing user's startups
+- **Modern UI**: Beautiful interface with Lucide React icons and custom components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js 15 (React 19)
+- **Styling**: Tailwind CSS
+- **CMS**: Sanity
+- **Authentication**: NextAuth.js
+- **TypeScript**: Full type safety
+- **Icons**: Lucide React
+- **Form Handling**: React Hook Form
+- **Error Monitoring**: Sentry
+- **Deployment**: Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/devpatony/Production-Ready-App.git
+   cd Production-Ready-App
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```env
+   # NextAuth Configuration
+   NEXTAUTH_SECRET=your_nextauth_secret
+   NEXTAUTH_URL=http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   # GitHub OAuth
+   GITHUB_CLIENT_ID=your_github_client_id
+   GITHUB_CLIENT_SECRET=your_github_client_secret
 
-## Deploy on Vercel
+   # Sanity Configuration
+   NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+   NEXT_PUBLIC_SANITY_DATASET=production
+   SANITY_API_READ_TOKEN=your_sanity_read_token
+   SANITY_API_WRITE_TOKEN=your_sanity_write_token
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   # Sentry Configuration (Optional)
+   SENTRY_DSN=your_sentry_dsn
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Set up Sanity**
+   ```bash
+   npm run typegen
+   ```
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. **Open the application**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🏗 Project Structure
+
+<img width="633" height="551" alt="image" src="https://github.com/user-attachments/assets/1458b572-ba3a-41aa-8ab5-ae17f1f2b686" />
+
+## 🎯 Usage
+
+### Creating a Startup
+
+1. Sign in with your GitHub account
+2. Click on "Create" in the navigation
+3. Fill out the startup form with:
+   - Title and description
+   - Category selection
+   - Image upload
+   - Detailed pitch (Markdown supported)
+4. Submit to publish your startup
+
+### Browsing Startups
+
+- View all startups on the home page
+- Use the search functionality to find specific startups
+- Click on any startup card to view detailed information
+- Check out the "Editor's Picks" section for curated recommendations
+
+### User Profiles
+
+- View user profiles by clicking on author names
+- See all startups created by a specific user
+- View user statistics and information
+
+## 🔧 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run typegen` - Generate Sanity types
+
+## 🎨 Customization
+
+### Styling
+The project uses Tailwind CSS for styling. You can customize the design by:
+- Modifying `tailwind.config.ts`
+- Updating component styles in individual files
+- Adding custom CSS in `globals.css`
+
+### Content Types
+Add new content types by:
+1. Creating schema files in `sanity/schemaTypes/`
+2. Adding them to the schema index
+3. Running `npm run typegen` to generate types
+
+### Authentication
+The project uses NextAuth.js with GitHub provider. You can add more providers by:
+1. Installing the required provider package
+2. Configuring it in `auth.ts`
+3. Adding environment variables
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically on every push to main branch
+
+### Environment Variables for Production
+
+Ensure all environment variables are set in your deployment platform:
+- NextAuth configuration
+- Sanity API tokens
+- GitHub OAuth credentials
+- Sentry DSN (optional)
+
