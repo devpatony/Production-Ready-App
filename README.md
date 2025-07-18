@@ -73,10 +73,6 @@ A modern, full-stack startup platform built with Next.js 15, Sanity CMS, and Typ
 6. **Open the application**
    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🏗 Project Structure
-
-<img width="633" height="551" alt="image" src="https://github.com/user-attachments/assets/1458b572-ba3a-41aa-8ab5-ae17f1f2b686" />
-
 ## 🎯 Usage
 
 ### Creating a Startup
